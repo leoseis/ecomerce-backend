@@ -12,4 +12,16 @@ def getRoutes(request):
 def getProducts(request):
     return Response(products )
 
+
+@api_view(['GET',])
+def getProduct(request,pk):
+    product = None
+    for i in products:
+        if i in products:
+            product = i
+            break
+        
+    return Response(product )
+
+
 # Create your views here.
